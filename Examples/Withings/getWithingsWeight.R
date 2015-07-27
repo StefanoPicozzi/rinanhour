@@ -3,7 +3,7 @@ library('httr')
 library('rjson')
 library('RCurl')
 
-setwd("/Users/stefanopicozzi/Dropbox/Red Hat/RHTE2015/Examples/Withings")
+setwd("/home/guest")
 
 fitbitkey <- "a7dd1c18a2a64dbcbd11e10482c8d5ef"                          
 fitbitsecret <- "ff877fa1f54741ae93a549bdb2d7e900"
@@ -17,7 +17,7 @@ fbr <- oauth_app(fitbitappname, fitbitkey, fitbitsecret)
 fitbit <- oauth_endpoint(token_url, auth_url, access_url)
 #token = oauth1.0_token(fitbit, fbr)
 #saveRDS(token, file = paste("user/", username, "/fitbit-token.RDS", sep = ""))
-token <- readRDS("fitbit-token.RDS")
+token <- readRDS("Withings/fitbit-token.RDS")
 sig <- sign_oauth1.0(app=fbr, token=token$oauth_token, token_secret=token$oauth_token_secret)
 
 startdate <- Sys.Date()-30

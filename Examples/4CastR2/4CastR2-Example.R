@@ -2,13 +2,13 @@ getwd()#!/usr/bin/Rscript
 
 # Author: Stefano Picozzi
 # Date: January 2015
-# Name: 4CastR.R
+# Name: 4CastR2-Example.R
 
 # Batch control script
 Sys.setenv(NOAWT = "true")
 
-setwd("/Users/stefanopicozzi/Dropbox/Red Hat/RHTE2015/Examples/4CastR2")
-source("4CastR2.R")
+setwd("/home/guest")
+source("4CastR2/4CastR2.R")
 ppi <- 800
 
 # The top 20 ASX stocks
@@ -38,7 +38,7 @@ size <- 80
 config <- data.frame(xAxisTitle, yAxisTitle, chartTitle, 
                      xIntercept, yIntercept, xMin, yMin, xMax, yMax, size, stringsAsFactors=FALSE)
 
-png("4CastR2-Example.png",
+png("4CastR2/4CastR2-Example.png",
     res = 300,
     width = 4*ppi,
     height = 4*ppi,

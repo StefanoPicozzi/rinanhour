@@ -2,7 +2,7 @@
 
 # Author: Stefano Picozzi
 # Date: January 2015
-# Name: 4CastR.R
+# Name: 4CastR2.R
 
 # Batch control script
 #Sys.setenv(NOAWT = "true")
@@ -21,10 +21,10 @@ library("png")
 print("Building plots ...")
 get4Cast <- function(config, data) {
 
-   img <- readPNG("4CastR.png")
+   img <- readPNG("4CastR2/4CastR.png")
    g <- rasterGrob(img, interpolate=TRUE)
 
-   img <- readPNG("legend.png")
+   img <- readPNG("4CastR2/legend.png")
    l <- rasterGrob(img, interpolate=TRUE)
     
    printMoney <- function(x) {
